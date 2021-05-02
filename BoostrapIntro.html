@@ -47,15 +47,27 @@
     <button onclick="subtraction()" type="button" class="btn btn-warning">Subtraction</button><br><br>
 
     <button onclick="multiplication()" type="button" class="btn btn-warning">multiplication</button><br><br>
-
+  
     <button onclick="division()" type="button" class="btn btn-warning">division</button><br><br>
+
+    <button onclick="remainder()" type="button" class="btn btn-warning">remainder </button><br><br>
+
+    <button onclick="square()" type="button" class="btn btn-warning">square </button><br><br>
+
+    <button onclick="cube()" type="button" class="btn btn-warning">cube </button><br><br>
+
+    <button onclick="power()" type="button" class="btn btn-warning">power </button><br><br>
+  
   </div>
+
+
 
 
   </section>
 
   <script>
-    function addition() {
+    function addition() 
+    {
       var num1 = document.getElementById('number1').value;
       var num2 = document.getElementById('number2').value;
 
@@ -68,7 +80,8 @@
 
     }
 
-    function subtraction() {
+    function subtraction()
+     {
       var num1 = document.getElementById('number1').value;
       var num2 = document.getElementById('number2').value;
 
@@ -80,7 +93,8 @@
       document.getElementById('result').innerText = sum;
     }
 
-    function multiplication() {
+    function multiplication()
+     {
       var num1 = document.getElementById('number1').value;
       var num2 = document.getElementById('number2').value;
 
@@ -94,7 +108,8 @@
     }
 
 
-    function division() {
+    function division() 
+    {
       var num1 = document.getElementById('number1').value;
       var num2 = document.getElementById('number2').value;
 
@@ -106,6 +121,56 @@
       document.getElementById('result').innerText = sum;
 
     }
+
+
+    function remainder() 
+    {
+      var num1 = document.getElementById('number1').value;
+      var num2 = document.getElementById('number2').value;
+
+      var firstNumber = parseInt(num1);
+      var secondNumber = parseInt(num2);
+
+      var sum = firstNumber % secondNumber;
+
+      document.getElementById('result').innerText = sum;
+
+
+    }
+
+
+    
+    function cube()
+    {
+      
+      var num1 = document.getElementById('number1').value;
+      var num2 = document.getElementById('number2').value;
+      var firstNumber = parseInt(num1);
+      var secondNumber = parseInt(num2);
+      var sum = firstNumber * firstNumber *firstNumber
+      document.getElementById('result').innerText = sum;
+
+
+    }
+
+    function power()
+    {
+      var num1 = document.getElementById('number1').value;
+      var num2 = document.getElementById('number2').value;
+
+      var firstNumber = parseInt(num1);
+      var secondNumber = parseInt(num2);
+      var i;
+      var sum=1;
+
+      for( i=1; i<= secondNumber; i++)
+      {
+        sum= sum*firstNumber;
+      }
+
+      document.getElementById('result').innerText = sum;
+    }
+
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
